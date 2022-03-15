@@ -6,13 +6,13 @@ def create_sql_table():
 
     create_query = """CREATE TABLE state_weather(
         STATE VARCHAR(30),
-        DESCRIPTION varchar(30),
-        TEMPERATURE decimal,
-        FEELS_LIKE_TEMPERATURE decimal,
-        MIN_TEMP decimal,
-        MAX_TEMP decimal,
-        HUMIDITY numeric,
-        CLOUDS numeric)"""
+        DESCRIPTION VARCHAR(30),
+        TEMPERATURE DECIMAL,
+        FEELS_LIKE_TEMPERATURE DECIMAL,
+        MIN_TEMP DECIMAL,
+        MAX_TEMP DECIMAL,
+        HUMIDITY NUMERIC,
+        CLOUDS NUMERIC)"""
 
     df = pd.read_csv("country_weather.csv")
     print(df)

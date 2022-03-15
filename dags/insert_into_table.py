@@ -11,8 +11,8 @@ def insert_into_sql_table():
                                       port='5432')
         cur = connection.cursor()
 
-        query = "Insert INTO state_weather (STATE, DESCRIPTION, TEMPERATURE, FEELS_LIKE_TEMPERATURE, MIN_TEMP, " \
-                "MAX_TEMP, HUMIDITY,CLOUDS) values (%s,%s,%s,%s,%s,%s,%s,%s)"
+        query = "INSERT INTO state_weather (STATE, DESCRIPTION, TEMPERATURE, FEELS_LIKE_TEMPERATURE, MIN_TEMP, " \
+                "MAX_TEMP, HUMIDITY,CLOUDS) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
 
         for index, row in df.iterrows():
             cur.execute(query, (
@@ -24,7 +24,7 @@ def insert_into_sql_table():
         print("Inserted into table successfully")
 
     except:
-        print("Could not insert into database. Unknown error occurred.")
+        print("Could not insert into table. Unknown error occurred.")
 
     finally:
         if connection is not None:
